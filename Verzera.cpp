@@ -43,11 +43,22 @@ namespace Prog2 {
 	double Verzera::Volume() const { return (3.14159 * 3.14159 * A.y * A.y * A.y) / 2; }
 	Point Verzera::getA()const { return A; }
 	double Verzera::Area() const { return (3.14159 * (A.y) * (A.y)); }
+	/*
 	std::string Verzera::frm() const{
 		std::string	 a2= std::to_string(A.y*A.y);
 		std::string	 a3 = std::to_string(A.y * A.y * A.y);
 		std::string  sout = "y=( " + a3 + " )/( " + a2 + " + x^2 )";
 		return sout;
+	}
+	*/
+	std::stringstream Verzera::frm()const 
+	{
+		std::stringstream s;
+		if (A.y != 0)
+			s << "y = ( " << A.y * A.y * A.y << " )/( " << A.y * A.y << " + x^2 )";
+		else
+			s << A.y;
+		return s;
 	}
 	double Verzera::CoordY(double x) const
 	{

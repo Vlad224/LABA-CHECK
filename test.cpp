@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "gtest\gtest.h"
 #include "..\laba 2\Header.h"
 #include "..\laba 2\Verzera.cpp"
@@ -56,7 +55,7 @@ TEST(VerzeraConstructor, Parameters)
     ASSERT_EQ(10, a1.CoordY(0));
     //char* s;
     //a1.frm(s);
-    //ASSERT_STREQ("( 1000.00 )/( 100.00 + x^2)", a1.frm());
+    ASSERT_STREQ("y = ( 1000 )/( 100 + x^2 )", a1.frm().str().c_str());
     Prog2::Verzera a2;
     ASSERT_NEAR(0, a2.Area(), err);
     const Prog2::Point p5(0, 0);
@@ -70,7 +69,7 @@ TEST(VerzeraConstructor, Parameters)
     ASSERT_ANY_THROW(a2.CoordY(0));
     //delete[] s;
     //a2.frm(s);
-    //ASSERT_STREQ("0.00", s);
+    ASSERT_STREQ("0", a2.frm().str().c_str());
 }
 int main(int argc, char* argv[])
 {

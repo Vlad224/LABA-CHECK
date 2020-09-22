@@ -10,8 +10,8 @@ int main()
 	char* s = NULL;
 	while (fl1) {
 		std::cout << "Your Verzera Anyeza is:" << std::endl;
-		std::string s = c.frm();
-		std::cout << s << std::endl;
+		std::stringstream s = c.frm();
+		std::cout << s.str() << std::endl;
 		std::cout << "Area: " << c.Area() << std::endl;
 		c.Inflection(P1, P2);
 		std::cout << "Inflection Points: ( " << P1.x <<" , "<<P1.y<<" ) , ( "<< P2.x << " , " << P2.y <<" )"<< std::endl;
