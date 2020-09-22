@@ -1,7 +1,6 @@
 #pragma once
 #include<iostream>
 #include<math.h>
-#include<string>
 #include<sstream>
 namespace Prog2 {
 	struct Point {
