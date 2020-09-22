@@ -23,34 +23,9 @@ namespace Prog2 {
 		P1.y = 3*(A.y)/4;
 		P2.y = P1.y;
 	}
-	/*
-	void Verzera::frm(char* &s)const
-	{
-		const char* s1 = "(  )/(  + x^2)";
-		int l = strlen(s1) + 1;
-		char num[20];
-		sprintf_s(num, 20, "%.2f", A.y*A.y);
-		l += strlen(num);
-		sprintf_s(num, 20, "%.2f", A.y * A.y * A.y);
-		l += strlen(num);
-		s = new char[l];
-		if (A.y == 0)
-			sprintf_s(s, l, "%.2f", A.y);
-		else
-			sprintf_s(s, l, "( %.2f )/( %.2f + x^2)", A.y * A.y * A.y, A.y * A.y);
-	}
-	*/
 	double Verzera::Volume() const { return (3.14159 * 3.14159 * A.y * A.y * A.y) / 2; }
 	Point Verzera::getA()const { return A; }
 	double Verzera::Area() const { return (3.14159 * (A.y) * (A.y)); }
-	/*
-	std::string Verzera::frm() const{
-		std::string	 a2= std::to_string(A.y*A.y);
-		std::string	 a3 = std::to_string(A.y * A.y * A.y);
-		std::string  sout = "y=( " + a3 + " )/( " + a2 + " + x^2 )";
-		return sout;
-	}
-	*/
 	std::stringstream Verzera::frm()const 
 	{
 		std::stringstream s;

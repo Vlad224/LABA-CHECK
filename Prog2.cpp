@@ -1,6 +1,5 @@
 #include"Header.h"
-int main()
-{
+int main() {
 	Prog2::Verzera c(2,0);
 	Prog2::Point P1;
 	Prog2::Point P2;
@@ -28,8 +27,7 @@ int main()
 				y = c.CoordY(x);
 				std::cout << "y = " << y << std::endl;
 			}
-			catch (std::exception & ex)
-			{
+			catch (std::exception & ex) {
 				std::cout << ex.what() << std::endl;
 			}
 		}
@@ -40,14 +38,12 @@ int main()
 			try {
 				c.setA(p);
 			}
-			catch (std::exception & ex)
-			{
+			catch (std::exception & ex) {
 				std::cout << ex.what() << std::endl;
 			}
 		}
 		else
 			fl1 = 0;
 	}
-	_CrtDumpMemoryLeaks();
 	return 0;
 }

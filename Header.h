@@ -21,8 +21,6 @@ namespace Prog2 {
 		void Inflection (Point& P1,Point& P2)const;
 		double Area() const;
 		double Volume() const;
-		//void frm(char* &s)const;
-		//std::string frm()const;
 		std::stringstream frm()const;
 	};
 }
