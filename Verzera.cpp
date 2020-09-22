@@ -33,7 +33,7 @@ namespace Prog2 {
 		l += strlen(num);
 		sprintf_s(num, 20, "%.2f", A.y * A.y * A.y);
 		l += strlen(num);
-		s = DBG_NEW char[l];
+		s = new char[l];
 		if (A.y == 0)
 			sprintf_s(s, l, "%.2f", A.y);
 		else
