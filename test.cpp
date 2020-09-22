@@ -1,5 +1,5 @@
-#include "gtest/gtest.h"
-#include "..\laba 2\Header.h"
+#include "pch.h"
+#include "..\laba 2\Verzera.h"
 #include "..\laba 2\Verzera.cpp"
 
 TEST(VerzeraConstructor, DefaultConstructor){
@@ -13,11 +13,6 @@ TEST(VerzeraConstructor, InitConstructors){
     Prog2::Point p(0, 3);
     ASSERT_EQ(3, a2.getA().y);
     ASSERT_EQ(0, a2.getA().x);
-    Prog2::Verzera a5(10);
-    Prog2::Verzera a3(a5);
-    a3.setA(p);
-    ASSERT_EQ(0, a5.getA().x);
-    ASSERT_EQ(10, a5.getA().y);
     Prog2::Verzera a4(2, 0);
     ASSERT_EQ(2, a4.getA().y);
     ASSERT_EQ(0, a4.getA().x);
@@ -50,9 +45,9 @@ TEST(Verzera, CoordY) {
 }
 TEST(Verzera, FRM) {
     Prog2::Verzera a1(10, 0);
-    ASSERT_STREQ("y = ( 1000 )/( 100 + x^2 )", a1.frm().str().c_str());
+    ASSERT_STREQ("y = 1000 /( 100 + x^2 )", a1.frm().c_str());
     Prog2::Verzera a2;
-    ASSERT_STREQ("0", a2.frm().str().c_str());
+    ASSERT_STREQ("y = 0", a2.frm().c_str());
 }
 TEST(Verzera, Inflection) {
     const double err = 0.00001;
