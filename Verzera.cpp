@@ -1,15 +1,9 @@
-#include"Header.h"
+#include"Verzera.h"
 namespace Prog2 {
 	Verzera::Verzera() : A(0,0) {}
-	//Verzera::Verzera(const Verzera& r  ):A(r.A){}
-	Verzera::Verzera(const Verzera& r){
-		*this = r;
-	}
 	Verzera::Verzera(double y,double x){
-		if(x!=0)
-			throw std::exception("invalid coordinats");
-		A.x = x;
-		A.y = y;
+		Point P(x, y);
+		Verzera::setA(P);
 	}
 	Verzera& Verzera::setA(Point A0){
 		if (A0.x != 0)
@@ -26,14 +20,14 @@ namespace Prog2 {
 	double Verzera::Volume() const { return (3.14159 * 3.14159 * A.y * A.y * A.y) / 2; }
 	Point Verzera::getA()const { return A; }
 	double Verzera::Area() const { return (3.14159 * (A.y) * (A.y)); }
-	std::stringstream Verzera::frm()const 
-	{
+	std::string Verzera::frm()const {
 		std::stringstream s;
+	    s << "y = ";
 		if (A.y != 0)
-			s << "y = ( " << A.y * A.y * A.y << " )/( " << A.y * A.y << " + x^2 )";
+			s  << A.y * A.y * A.y << " /( " << A.y * A.y << " + x^2 )";
 		else
-			s << A.y;
-		return s;
+			s  << A.y;
+		return s.str();
 	}
 	double Verzera::CoordY(double x) const
 	{

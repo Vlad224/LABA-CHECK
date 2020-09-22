@@ -13,13 +13,12 @@ namespace Prog2 {
 	public:
 		Verzera();
 		Verzera(double y, double x = 0);
-		Verzera(const Verzera& r);
 		Verzera& setA(Point A0);// сетер
 		Point getA()const;
 		double CoordY(double x)const;
 		void Inflection (Point& P1,Point& P2)const;
 		double Area() const;
 		double Volume() const;
-		std::stringstream frm()const;
+		std::string frm()const;
 	};
 }
