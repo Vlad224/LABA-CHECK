@@ -24,7 +24,7 @@ namespace Prog2 {
 		std::stringstream s;
 	    s << "y = ";
 		if (A.y != 0)
-			s  << A.y * A.y * A.y << " /( " << A.y * A.y << " + x^2 )";
+			s  << A.y * A.y * A.y << "/( " << A.y * A.y << " + x^2 )";
 		else
 			s  << A.y;
 		return s.str();
