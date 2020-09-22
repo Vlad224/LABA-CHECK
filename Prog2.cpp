@@ -7,7 +7,6 @@ int main()
 	Prog2::Point p;
 	int fl1 = 1;
 	double r;
-	char* s = NULL;
 	while (fl1) {
 		std::cout << "Your Verzera Anyeza is:" << std::endl;
 		std::stringstream s = c.frm();
