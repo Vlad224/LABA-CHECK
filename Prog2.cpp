@@ -12,7 +12,10 @@ int main() {
 		std::cout << s << std::endl;
 		std::cout << "Area: " << c.Area() << std::endl;
 		c.Inflection(P1, P2);
-		std::cout << "Inflection Points: ( " << P1.x <<" , "<<P1.y<<" ) , ( "<< P2.x << " , " << P2.y <<" )"<< std::endl;
+		if(P1.x!=P2.x)
+			std::cout << "Inflection Points: ( " << P1.x <<" , "<<P1.y<<" ) , ( "<< P2.x << " , " << P2.y <<" )"<< std::endl;
+		else
+			std::cout << "Inflection Point: ( " << P1.x << " , " << P1.y << " )"<< std::endl;
 		std::cout << "Volume: " << c.Volume() << std::endl;
 		int fl2 = 1;
 		while (fl2) {

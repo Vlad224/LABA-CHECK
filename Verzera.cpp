@@ -3,7 +3,7 @@ namespace Prog2 {
 	Verzera::Verzera() : A(0,0) {}
 	Verzera::Verzera(double y,double x){
 		Point P(x, y);
-		Verzera::setA(P);
+		setA(P);
 	}
 	Verzera& Verzera::setA(Point A0){
 		if (A0.x != 0)
