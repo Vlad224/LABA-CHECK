@@ -26,7 +26,7 @@ namespace Prog2 {
 		if (A.y != 0)
 			s  << A.y * A.y * A.y << "/( " << A.y * A.y << " + x^2 )";
 		else
-			s  << A.y;
+			s  << A.y<<"; {x!=0}";
 		return s.str();
 	}
 	double Verzera::CoordY(double x) const

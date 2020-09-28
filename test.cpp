@@ -47,7 +47,7 @@ TEST(Verzera, FRM) {
     Prog2::Verzera a1(10, 0);
     ASSERT_STREQ("y = 1000/( 100 + x^2 )", a1.frm().c_str());
     Prog2::Verzera a2;
-    ASSERT_STREQ("y = 0", a2.frm().c_str());
+    ASSERT_STREQ("y = 0; {x!=0}", a2.frm().c_str());
 }
 TEST(Verzera, Inflection) {
     const double err = 0.00001;

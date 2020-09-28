@@ -19,7 +19,7 @@ int main() {
 		std::cout << "Volume: " << c.Volume() << std::endl;
 		int fl2 = 1;
 		while (fl2) {
-			std::cout << "Enter x for calculate value y(x) or precc ctrl+Z to quit:" <<std::endl;
+			std::cout << "Enter x to calculate value y(x) or precc ctrl+Z to quit:" <<std::endl;
 			double x;
 			double y;
 			std::cin >> x;
